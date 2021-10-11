@@ -1,0 +1,11 @@
+{
+  "name": "Export tabs",
+  "description": "Export all opened tabs to HTML file in chrome browser",
+  "version": "0.0",
+  "permissions": ["tabs", "bookmarks"],
+  "browser_action": {
+    "default_popup": "./popup.html",
+    "default_title": "Export tabs"
+  },
+  "manifest_version": 2
+}

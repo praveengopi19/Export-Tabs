@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./popup.js"></script>
+    <link rel="stylesheet" href="./popup.css" />
+    <title>Export tabs</title>
+  </head>
+
+  <body>
+    <form id="form">
+      <div class="custom-control-input">
+        <input type="checkbox" class="custom-control-input" id="selectAll" />
+        <label class="custom-control-label" for="selectAll"
+          >Select all tabs</label
+        >
+      </div>
+      <ul class="multiple-checkbox" id="top">
+        <li>
+          <input type="checkbox" class="custom-control-input" id="list2" />
+          <label class="custom-control-label" for="list2"
+            >Checkbox List #2</label
+          >
+        </li>
+        <li>
+          <input type="checkbox" class="custom-control-input" id="list3" />
+          <label class="custom-control-label" for="list3"
+            >Checkbox List #3</label
+          >
+        </li>
+      </ul>
+      <button type="submit" id="submit">Submit form</button>
+    </form>
+  </body>
+</html>
