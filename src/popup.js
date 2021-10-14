@@ -89,7 +89,7 @@ function handleSelectedInfo(){
     if(tempUrlsSize==1){
       countNode.textContent = "1 Tab selected"
     }else{
-      countNode.textContent = `${tempUrlsSize} Tab selected`
+      countNode.textContent = `${tempUrlsSize} Tabs selected`
     }
   }else{
     const countNode = document.getElementById("selectedCount")
