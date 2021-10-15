@@ -10,19 +10,22 @@
   </head>
 
   <body>
-    <form class="tab-form" id="tabForm">
+    <div class="tab-wrapper">
       <div class="select-all">
         <label class="header-group">
           <div class="header-group-container">
             <input type="checkbox" class="tab-input" id="selectAll" />
             <div class="tab-title" id="tabsHeading">Tabs</div>
           </div>
-          <small class="selected-count selected-count-hide" id="selectedCount"> 4 selected</small>
+          <small class="selected-count selected-count-hide" id="selectedCount">
+            0 selected</small
+          >
         </label>
       </div>
-      <ul class="tab-groups" id="tab-group">
-        </ul>
-    </form>
-    <button type="submit" class="submit-button" id="submit">Download as HTML</button>
+        <ul class="tab-groups tab-form" id="tab-group"></ul>
+    </div>
+    <button type="submit" class="submit-button" id="submit">
+      Download as HTML
+    </button>
   </body>
 </html>
