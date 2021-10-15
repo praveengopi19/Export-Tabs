@@ -46,9 +46,9 @@ function createLists(tabs) {
 chrome.tabs.query({ currentWindow: true }, createLists);
 
 window.onload = function () {
-  const form = document.getElementById("submit");
+  const submitButton = document.getElementById("submit");
 
-  form.addEventListener("click", download);
+  submitButton.addEventListener("click", download);
 
   document.getElementById("tab-group").addEventListener("change", handleChange);
 
@@ -61,7 +61,6 @@ function handleSelectAll(event) {
   event.stopPropagation();
 
   let sizeOfTempUrl = tempUrls.size;
-  console.log(sizeOfTempUrl);
   if (sizeOfTempUrl != 0 && sizeOfTempUrl <= Object.keys(urls).length) {
     tempUrls.clear();
     document.getElementById("selectAll").checked = false;
@@ -70,7 +69,6 @@ function handleSelectAll(event) {
       document.getElementById(id).checked = false;
     });
   } else {
-    console.log("Fill");
     Object.keys(urls).forEach((id) => {
       tempUrls.add(id);
       document.getElementById(id).checked = true;
@@ -108,6 +106,18 @@ function handleChange(event) {
     tempUrls.delete(newId);
   } else {
     tempUrls.add(newId);
+  }
+
+  let sizeOfTempUrl = tempUrls.size;
+
+  if(sizeOfTempUrl == Object.keys(urls).length){
+    document.getElementById("selectAll").checked = true;
+    document.getElementById("selectAll").indeterminate = false;
+  }else if(sizeOfTempUrl === 0){
+    document.getElementById("selectAll").checked = false;
+    document.getElementById("selectAll").indeterminate = false;
+  }else{
+    document.getElementById("selectAll").indeterminate = true;
   }
 
   handleSelectedInfo()

@@ -9,11 +9,12 @@ body {
     overflow : hidden;
 }
 
-.tab-form {
-    overflow-y    : scroll;
+
+.tab-wrapper{
     height        : 450px;
     padding-block : 15px;
     padding-inline: 10px;
+    overflow: hidden;
 }
 
 .tab-form::-webkit-scrollbar {
@@ -22,6 +23,7 @@ body {
 
 .tab-form::-webkit-scrollbar-thumb {
     background: #c7c7c7;
+    border-radius: 3px;
 }
 
 
@@ -75,12 +77,15 @@ body {
 }
 
 .tab-groups {
-    list-style          : none;
+    height: 100%;
+    overflow: scroll;
+    list-style: none;
     padding-inline-start: 13px;
+    padding-block-end: 15px;
 }
 
 .individual-tab {
-    margin: 10px 0;
+    margin: 10px 5px 10px 0px;
 }
 
 .tab-input {
@@ -104,7 +109,7 @@ body {
     margin-top   : 1px;
     margin-bottom: 3px;
     color        : #737373;
-    margin-left  : 25px;
+    margin-left  : 28px;
     overflow-wrap: anywhere;
     hyphens      : auto;
 }
